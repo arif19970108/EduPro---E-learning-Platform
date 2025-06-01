@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduPro - E-learning Platform</title>
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER + NAVBAR SECTION ========== -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.jpg" alt="EduPro Logo" />
+        <span>EduPro - E-learning Platform</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#instructors">Instructors</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#live">Live</a></li>
+        <li><a href="#enroll">Enroll</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        ☰
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ========== HERO SECTION ========== -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Welcome to EduPro</h1>
+    <p>Your Gateway to World-Class Online Learning</p>
+    <a href="#enroll" class="btn">Join Now</a>
+  </div>
+</section>
+
+
+<!-- ========== COURSES SECTION ========== -->
+<section class="courses" id="courses">
+  <h2>Our Popular Courses</h2>
+
+  <!-- Filter Buttons -->
+  <div class="course-filters">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="web">Web Development</button>
+    <button class="filter-btn" data-category="design">UI/UX Design</button>
+    <button class="filter-btn" data-category="data">Data Science</button>
+    <button class="filter-btn" data-category="javascript">JavaScript</button>
+  </div>
+
+  <!-- Course Cards -->
+  <div class="course-container">
+    <div class="course-card" data-category="web">
+      <img src="images/course1.jpg" alt="Web Dev">
+      <h3>Full Stack Web Development</h3>
+      <p>Learn HTML, CSS, JS, and backend development</p>
+    </div>
+
+    <div class="course-card" data-category="design">
+      <img src="images/course2.jpg" alt="Design">
+      <h3>UI/UX Design Mastery</h3>
+      <p>Master Figma, Prototyping, and Design Systems</p>
+    </div>
+
+    <div class="course-card" data-category="data">
+      <img src="images/course3.jpg" alt="Data Science">
+      <h3>Data Science with Python</h3>
+      <p>Learn Pandas, NumPy, ML, and visualization</p>
+    </div>
+
+    <div class="course-card" data-category="javascript">
+      <img src="images/course4.jpg" alt="JS">
+      <h3>JavaScript Advanced Projects</h3>
+      <p>Build 10+ real-world JS projects</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Instructors Section -->
+<section id="instructors" class="instructors-section">
+  <div class="container">
+    <h2>Meet Our Expert Instructors</h2>
+    <div class="instructors-container">
+      <div class="instructor-card">
+        <img src="images/instructor1.jpg" alt="Instructor 1">
+        <h3>Sarah Ahmed</h3>
+        <p>Frontend Developer & UI/UX Designer</p>
+      </div>
+      <div class="instructor-card">
+        <img src="images/instructor2.jpg" alt="Instructor 2">
+        <h3>Jamey Urobi Khan</h3>
+        <p>Full Stack Developer & Mentor</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Student Reviews Section -->
+ <section class="reviews" id="reviews">
+  <h2>What Our Students Say</h2>
+  <div class="slider">
+    <div class="review active">
+      <img src="images/review1.jpg" alt="Student 1">
+      <p>"EduPro made learning fun and easy! Loved the course structure."</p>
+      <h4>– Sarah J.</h4>
+    </div>
+    <div class="review">
+      <img src="images/review2.jpg" alt="Student 2">
+      <p>"The instructors are amazing and the live sessions were super helpful!"</p>
+      <h4>– Alex B.</h4>
+    </div>
+  </div>
+  <div class="slider-buttons">
+    <button id="prevBtn">&#8592;</button>
+    <button id="nextBtn">&#8594;</button>
+  </div>
+</section>
+
+
+<!-- Live Classes + Countdown Timer Section -->
+<section class="live" id="live">
+  <h2>Upcoming Live Class</h2>
+  <div class="live-container">
+    <div class="live-info">
+      <h3>Mastering JavaScript: Live Session</h3>
+      <p><strong>Date:</strong> July 15, 2025</p>
+      <p><strong>Time:</strong> 6:00 PM (GMT+6)</p>
+      <p>Join our expert-led live session and take your skills to the next level!</p>
+    </div>
+    <div class="countdown">
+      <div><span id="days">00</span><p>Days</p></div>
+      <div><span id="hours">00</span><p>Hours</p></div>
+      <div><span id="minutes">00</span><p>Minutes</p></div>
+      <div><span id="seconds">00</span><p>Seconds</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- === Enrollment Section === -->
+<section id="enroll" class="section">
+  <div class="container">
+    <h2>Enroll Now</h2>
+    <p>Join our premium online courses and take your skills to the next level!</p>
+    <button id="enrollBtn" class="btn-primary">Enroll Now</button>
+  </div>
+</section>
+
+<!-- === Modal Popup === -->
+<div id="enrollModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Course Enrollment</h3>
+    <form id="enrollForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <select required>
+        <option value="">Select Course</option>
+        <option>Web Development</option>
+        <option>Data Science</option>
+        <option>UI/UX Design</option>
+        <option>JavaScript</option>
+      </select>
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- FAQ Section -->
+<section class="faq-section" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <div class="faq-left">
+      <div class="faq-item">
+        <button class="faq-question">What courses do you offer?</button>
+        <div class="faq-answer">
+          <p>We offer courses in Web Development, Data Science, UI/UX Design, and more.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Are live classes recorded?</button>
+        <div class="faq-answer">
+          <p>Yes! All live sessions are recorded and made available for later viewing.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do I enroll in a course?</button>
+        <div class="faq-answer">
+          <p>You can enroll through the enrollment form by clicking "Enroll Now" under any course.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Will I receive a certificate after completing a course?</button>
+        <div class="faq-answer">
+          <p>Yes, upon successfully completing any of our courses, you will receive a digitally verifiable certificate that you can showcase on your resume or LinkedIn profile.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="faq-right">
+      <img src="images/faq.jpg" alt="FAQ Image" />
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <div class="contact-info">
+      <h3>Our Address</h3>
+      <p>EduPro Academy</p>
+      <p>123 Learning Street</p>
+      <p>Khulna, Bangladesh</p>
+      <p>Email: support@edupro.com</p>
+      <p>Phone: +880 1234-567890</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>EduPro</h3>
+      <p>Your trusted platform for learning Web Dev, Data Science, JavaScript, and UI/UX — all in one place.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#instructors">Instructors</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#live">Live Classes</a></li>
+        <li><a href="#enroll">Enroll</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Your Email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 EduPro Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for social icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  <!-- ========== JavaScript ========== -->
+  <script src="script.js"></script>
+</body>
+</html>
